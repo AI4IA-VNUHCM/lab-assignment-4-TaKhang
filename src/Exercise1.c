@@ -26,10 +26,10 @@ void Ex1(int n){
 	}
 }
 
-	int row=0, colum=0;
-	for (; row <= n; row++) {
-		for (; colum <= row; colum++) {
-			printf("%2d", pascalTriangle(colum, row));
+	int row, colum;
+	for (row=0; row <= n; row++) {
+		for (colum=0; colum <= row; colum++) {
+			printf("%2d", pascalTriangle(int colum, int row));
 		}
 		printf("\n");
 	}  
