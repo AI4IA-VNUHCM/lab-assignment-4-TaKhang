@@ -78,6 +78,7 @@ void Ex2(int arr[], int m, int n){
 				}
 			}
 		}
+	}
 
 	printArray(a, m, n);
 }
