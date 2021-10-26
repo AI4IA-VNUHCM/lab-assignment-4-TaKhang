@@ -34,7 +34,8 @@ void Array2Dconverter(int arr[], int a[SIZE][SIZE], int m, int n)
 }
 
 void Ex5(int arr[], int m, int n){
-	int a[SIZE][SIZE];
+	int a[SIZE][SIZE], MAX[100];
+	
 	Array2Dconverter(arr,a,m,n);
 	//Your codes here
 	
@@ -44,7 +45,7 @@ void Ex5(int arr[], int m, int n){
 			if (a[row][column]<min) {
 				min=a[row][column];
 			    }
-		    } //printf("\nMin cua row %d : %d",row,min);
+		    } 
 		        MAX[row]= min;
 		} 
 		int max=MAX[0];
