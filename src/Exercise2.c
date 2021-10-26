@@ -60,9 +60,9 @@ void Ex2(int arr[], int m, int n){
 			for (row=0; row < m; row++) {
 				for (i= row+1; i < m;i++) {
 					if (a[row][column] < a[i][column]) {
-					int tmp= a[row][column];
-						a[row][column]= a[i][column];
-						a[i][column]= tmp;
+						int tmp= a[row][column];
+							a[row][column]= a[i][column];
+							a[i][column]= tmp;
 					}	
 				}
 			}
@@ -71,9 +71,9 @@ void Ex2(int arr[], int m, int n){
 			for (row=0; row < m; row++) {
 				for (i= row+1; i < m;i++) {
 					if (a[row][column] > a[i][column]) {
-					int tmp= a[row][column];
-						a[row][column]= a[i][column];
-						a[i][column]= tmp;
+						int tmp= a[row][column];
+							a[row][column]= a[i][column];
+							a[i][column]= tmp;
 					}
 				}
 			}
