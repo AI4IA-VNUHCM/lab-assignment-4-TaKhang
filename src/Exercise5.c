@@ -44,7 +44,7 @@ void Ex5(int arr[], int m, int n){
 			if (a[row][column]<min) {
 				min=a[row][column];
 			    }
-		    } 
+		    } //printf("\nMin cua row %d : %d",row,min);
 		        MAX[row]= min;
 		} 
 		int max=MAX[0];
