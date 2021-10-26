@@ -29,7 +29,7 @@ void Ex1(int n){
 	int row, colum;
 	for (row=0; row <= n; row++) {
 		for (colum=0; colum <= row; colum++) {
-			printf("%d", pascalTriangle(colum,row));
+			printf("%d ", pascalTriangle(colum,row));
 		}
 		printf("\n");
 	}  
