@@ -94,7 +94,7 @@ void removeCol(int a[SIZE][SIZE], int colIndex, int m, int n){
 		for ( row=0; row < m; row++) {
 			a[row][col] = a[row][col + 1];
 		}
-	} m--;
+	} n--;
 	printArray(a,m, n);
 }
 int main(int argc, char *argv[]) {
