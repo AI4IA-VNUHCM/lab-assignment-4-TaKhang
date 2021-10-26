@@ -53,14 +53,13 @@ void Ex3(int in_arr[], int n){
 	//Your codes here
 	
 	int i,k;
-	for (i=0; i<n; i++) {
-		for (k= i + 1; k<n; k++) {
+	for (i=0; i<n; i++) 
+	for (k= i + 1; k<n; k++) {
 			if (a[k][k] < a[i][i]) {
 				int tmp= a[k][k];
 					a[k][k]= a[i][i];
 					a[i][i]= tmp;
 				}
-			}
 			 if ( a[k][n-1-k] < a[i][n-1-i]) {
 				int tmp= a[k][n-1-k];
 					a[k][n-1-k]= a[i][n-1-i];
