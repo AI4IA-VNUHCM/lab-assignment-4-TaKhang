@@ -17,6 +17,22 @@ ______________________________________
 
 void Ex1(int n){
 	//Your codes here
+	
+	int pascalTriangle( int colum, int n) {
+	if ( colum == 0 || colum == n ) {
+		return 1;
+	} else {
+		return pascalTriangle( colum - 1, n - 1) + pascalTriangle( colum, n - 1);
+	}
+}
+
+	int row=0, colum=0;
+	for (; row <= n; row++) {
+		for (; colum <= row; colum++) {
+			printf("%2d", pascalTriangle(colum, row));
+		}
+		printf("\n");
+	}  
     
 }
 
