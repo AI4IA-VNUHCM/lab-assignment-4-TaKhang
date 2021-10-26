@@ -50,23 +50,53 @@ void printArray(int a[SIZE][SIZE], int m, int n)
 void insertRow(int arr[], int a[SIZE][SIZE],int rowIndex, int m, int n){
 	//Your codes here
 	
+	int row, col;
+	for ( row = m - 1; row >= rowIndex; row--) {
+		for ( col=0; col < n; col++) {
+			a[row + 1][col] = a[row][col];
+		}
+	} m++;
+	for ( col=0; col < n; col++) {
+		a[rowIndex][col] = arr[col];
+	}
+	printArray(a,m, n);
 }
-
 void removeRow(int a[SIZE][SIZE], int rowIndex, int m, int n){
 	//Your codes here
 	
+	int row, col;
+	for ( row = rowIndex; row < m; row++) {
+		for ( col=0; col < n; col++) {
+			a[row][col] = a[row + 1][col];
+		}
+	} m--;
+	printArray(a,m, n);
 }
-
 void insertCol(int arr[], int a[SIZE][SIZE],int colIndex, int m, int n){
 	//Your codes here
 	
+	int row, col;
+	for ( col = n - 1; col >= colIndex; col--) {
+		for ( row=0; row < m; row++) {
+			a[row][col + 1] = a[row][col];
+		}
+	} n++;
+	for ( row=0; row < m; row++) {
+		a[row][colIndex] = arr[row];
+	}
+	printArray(a,m, n);
 }
-
 void removeCol(int a[SIZE][SIZE], int colIndex, int m, int n){
 	//Your codes here
 	
+	int row, col;
+	for ( col = colIndex; col < n; col++) {
+		for ( row=0; row < m; row++) {
+			a[row][col] = a[row][col + 1];
+		}
+	} n--;
+	printArray(a,m, n);
 }
-
 int main(int argc, char *argv[]) {
 	//testing variable, applying it to your algorithm for auto-evaluating
 	int row = atoi(argv[1]);

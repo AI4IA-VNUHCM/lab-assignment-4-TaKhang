@@ -53,6 +53,32 @@ void Ex2(int arr[], int m, int n){
 	int a[SIZE][SIZE];
 	Array2Dconverter(arr,a,m,n);
 	//Your codes here
+	
+	int row, column, i;
+	for (column=0; column < n ; column++) {
+		if (column%2==0) {
+			for (row=0; row < m; row++) {
+				for (i= row+1; i < m;i++) {
+					if (a[row][column] < a[i][column]) {
+						int tmp= a[row][column];
+							a[row][column]= a[i][column];
+							a[i][column]= tmp;
+					}	
+				}
+			}
+		}
+		else {
+			for (row=0; row < m; row++) {
+				for (i= row+1; i < m;i++) {
+					if (a[row][column] > a[i][column]) {
+						int tmp= a[row][column];
+							a[row][column]= a[i][column];
+							a[i][column]= tmp;
+					}
+				}
+			}
+		}
+	}
 
 	printArray(a, m, n);
 }
